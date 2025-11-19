@@ -1,26 +1,12 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import { Handshake, Globe, Package, TrendingUp, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Footer from "../compoments/Footer";
 import Header from "../compoments/Header";
 
 export default function PartnerPage() {
-  const [showHeader, setShowHeader] = useState(false);
   const aboutRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (aboutRef.current) {
-        const rect = aboutRef.current.getBoundingClientRect();
-        // ✅ Show header when hero scrolls out of view
-        setShowHeader(rect.bottom <= 0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <main className="flex flex-col min-h-screen bg-[#FBF7EF]">
       {/* 1️⃣ Hero Section */}
@@ -36,13 +22,7 @@ export default function PartnerPage() {
           </p>
         </div>
       </section>
-      <div
-              className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-                showHeader
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 -translate-y-10 pointer-events-none"
-              }`}
-            >
+      <div>
               <Header />
             </div>
 

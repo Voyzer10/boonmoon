@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Logistics",
     description:
-      "Efficient shipping and customs handling for seamless import to Dubai.",
+      "Efficient shipping and customs handling for seamless import to UAE.",
     icon: <Truck className="w-8 h-8 text-[#1D2B3A]" />,
   },
   {

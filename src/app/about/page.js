@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import { Moon } from "lucide-react";
 import AboutMeaning from "./AboutMeaning";
 import AboutMissionVision from "./AboutMissionVision";
@@ -9,21 +9,7 @@ import Footer from "../compoments/Footer";
 import Header from "../compoments/Header";
 
 export default function AboutPage() {
-  const [showHeader, setShowHeader] = useState(false);
   const aboutRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (aboutRef.current) {
-        const rect = aboutRef.current.getBoundingClientRect();
-        // ✅ Show header when hero scrolls out of view
-        setShowHeader(rect.bottom <= 0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <main>
@@ -61,13 +47,7 @@ export default function AboutPage() {
       </section>
 
       {/* Floating Header */}
-      <div
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          showHeader
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-10 pointer-events-none"
-        }`}
-      >
+      <div>
         <Header />
       </div>
 

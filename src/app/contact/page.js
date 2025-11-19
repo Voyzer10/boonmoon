@@ -1,12 +1,27 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+
+import { useRef, useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import Footer from "../compoments/Footer";
 import Header from "../compoments/Header";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const [status, setStatus] = useState({ loading: false, error: "", success: "" });
+  const aboutRef = useRef(null);
+
+  // ✅ FIX: Add form state
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // ✅ FIX: Add submission status state
+  const [status, setStatus] = useState({
+    loading: false,
+    error: "",
+    success: "",
+  });
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,7 +32,11 @@ export default function ContactPage() {
     setStatus({ loading: true, error: "", success: "" });
 
     if (!form.name || !form.email || !form.message) {
-      return setStatus({ loading: false, error: "Please fill all required fields.", success: "" });
+      return setStatus({
+        loading: false,
+        error: "Please fill all required fields.",
+        success: "",
+      });
     }
 
     try {
@@ -29,35 +48,29 @@ export default function ContactPage() {
 
       if (!res.ok) throw new Error("Submission failed");
 
-      setStatus({ loading: false, success: "Message sent successfully!", error: "" });
+      setStatus({
+        loading: false,
+        success: "Message sent successfully!",
+        error: "",
+      });
+
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
-      setStatus({ loading: false, error: err.message || "Something went wrong.", success: "" });
+      setStatus({
+        loading: false,
+        error: err.message || "Something went wrong.",
+        success: "",
+      });
     }
   }
-  const [showHeader, setShowHeader] = useState(false);
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (aboutRef.current) {
-        const rect = aboutRef.current.getBoundingClientRect();
-        // ✅ Show header when hero scrolls out of view
-        setShowHeader(rect.bottom <= 0);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
 
   return (
     <main className="flex flex-col min-h-screen">
       {/* 1️⃣ Hero Section */}
-      <section 
-      ref={aboutRef}
-      className="relative flex flex-col items-center justify-center text-center text-white h-[60vh] overflow-hidden">
+      <section
+        ref={aboutRef}
+        className="relative flex flex-col items-center justify-center text-center text-white h-[60vh] overflow-hidden"
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1624] via-[#0A1624] to-[#1A2229]" />
         <div className="relative z-10 px-6">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Get in Touch</h1>
@@ -66,21 +79,15 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-       {/* Floating Header */}
-      <div
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          showHeader
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-10 pointer-events-none"
-        }`}
-      >
-        <Header />
-      </div>
+
+      {/* Floating Header */}
+      <Header />
 
       {/* 2️⃣ Contact Info + Form */}
       <section className="py-24 bg-[#FBF7EF]">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
+            
             {/* Left: Contact Info */}
             <div>
               <h2 className="text-3xl font-bold text-[#1D2B3A] mb-4">Contact Information</h2>
@@ -96,10 +103,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Email</p>
-                    <a
-                      href="mailto:info@bonnmoontrading.com"
-                      className="text-[#384759] hover:text-[#E0B25B]"
-                    >
+                    <a href="mailto:info@bonnmoontrading.com" className="text-[#384759] hover:text-[#E0B25B]">
                       info@bonnmoontrading.com
                     </a>
                   </div>
@@ -121,7 +125,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Location</p>
-                    <p className="text-[#384759]">Dubai, United Arab Emirates</p>
+                    <p className="text-[#384759]">UAE, United Arab Emirates</p>
                   </div>
                 </div>
 
@@ -139,7 +143,9 @@ export default function ContactPage() {
             {/* Right: Form */}
             <div className="bg-white rounded-2xl shadow-md p-10 border border-[#EDEBE5]">
               <h3 className="text-2xl font-bold text-[#1D2B3A] mb-8">Send us a Message</h3>
+
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-[#1D2B3A] mb-2">
                     Name <span className="text-red-500">*</span>
@@ -154,6 +160,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Email */}
                 <div>
                   <label className="block text-sm font-medium text-[#1D2B3A] mb-2">
                     Email <span className="text-red-500">*</span>
@@ -168,6 +175,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Phone */}
                 <div>
                   <label className="block text-sm font-medium text-[#1D2B3A] mb-2">Phone</label>
                   <input
@@ -180,6 +188,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-[#1D2B3A] mb-2">
                     Message <span className="text-red-500">*</span>
@@ -194,9 +203,11 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Status Messages */}
                 {status.error && <p className="text-red-600 text-sm">{status.error}</p>}
                 {status.success && <p className="text-green-600 text-sm">{status.success}</p>}
 
+                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={status.loading}
@@ -207,6 +218,7 @@ export default function ContactPage() {
                 </button>
               </form>
             </div>
+
           </div>
         </div>
       </section>
@@ -216,14 +228,14 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#1D2B3A] mb-2">Visit Our Location</h2>
           <p className="text-[#384759]">
-            Find us in the heart of Dubai&apos;s trading district
+            Find us in the heart of UAE&apos;s trading district
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto bg-white border border-[#EDEBE5] rounded-2xl shadow-sm py-24 text-center">
           <MapPin className="w-12 h-12 text-[#0A1624] mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-[#1D2B3A] mb-2">
-            Dubai, United Arab Emirates
+            UAE, United Arab Emirates
           </h3>
           <p className="text-[#384759]">Exact location shared upon inquiry</p>
         </div>

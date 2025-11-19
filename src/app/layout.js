@@ -1,5 +1,6 @@
-// app/layout.js
 import "./globals.css";
+import Header from "./compoments/Header";
+import FloatingContactButton from "./compoments/FloatingContactButton"; // optional
 
 export const metadata = {
   title: "Bonn Moon Trading",
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ Google Fonts */}
+        {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
@@ -18,7 +19,20 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+
+      <body className="antialiased">
+        {/*   FIXED HEADER   */}
+        <div className="fixed top-0 left-0 w-full z-50">
+          <Header />
+        </div>
+
+        {/* Push content down so header doesn't overlap */}
+        <div className="pt-20">
+          {children}
+        </div>
+
+        <FloatingContactButton /> {/* optional */}
+      </body>
     </html>
   );
 }

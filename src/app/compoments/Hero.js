@@ -18,13 +18,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 px-6 max-w-3xl">
-        <div className="flex justify-center mb-6">
-          <Globe className="w-10 h-10 text-yellow-400" />
-        </div>
+        
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Connecting Global <br className="hidden md:block" />
-          Goodness to Dubai
+          Goodness to UAE
         </h1>
 
         <p className="text-lg md:text-xl text-gray-200 mb-10">
@@ -51,11 +49,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 z-10">
-        <div className="w-6 h-10 border-2 border-yellow-400 rounded-full flex items-start justify-center p-1">
-          <div className="w-1 h-2 bg-yellow-400 rounded-full animate-bounce" />
-        </div>
-      </div>
+      
     </section>
   );
 };

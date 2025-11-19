@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 pb-10 border-b border-[#1E2A3B]">
           {/* Left: Logo and Description */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            {/* <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/images/footer-logo@2x.svg" // ✅ from /public/images/
                 alt="Bonn Moon Trading Logo"
@@ -21,7 +21,7 @@ export default function Footer() {
                 className="object-contain"
                 priority
               />
-            </div>
+            </div> */}
             <p className="text-gray-300 leading-relaxed mb-3 max-w-sm">
               Bringing Global Goodness Home. We connect authentic products from
               around the world to the UAE market with transparency and care.
@@ -55,22 +55,22 @@ export default function Footer() {
                   href="/products"
                   className="hover:text-[#E0B25B] transition-colors"
                 >
-                  Our Products
+                   Products
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   href="/partners"
                   className="hover:text-[#E0B25B] transition-colors"
                 >
                   Partner With Us
-                </Link>
+                </Link> */}
               </li>
               <li>
                   <Link href="/contact" 
                   className="hover:text-[#E0B25B] transition-colors">
 
-                  Contact
+                  Contact US
                 </Link>
               </li>
             </ul>
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#E0B25B]" />
-                <span>Dubai, United Arab Emirates</span>
+                <span>UAE, United Arab Emirates</span>
               </li>
             </ul>
 
