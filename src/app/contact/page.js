@@ -46,7 +46,10 @@ export default function ContactPage() {
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) throw new Error("Submission failed");
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Submission failed");
+      }
 
       setStatus({
         loading: false,
@@ -87,7 +90,7 @@ export default function ContactPage() {
       <section className="py-24 bg-[#FBF7EF]">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
-            
+
             {/* Left: Contact Info */}
             <div>
               <h2 className="text-3xl font-bold text-[#1D2B3A] mb-4">Contact Information</h2>
