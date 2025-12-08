@@ -46,7 +46,10 @@ export default function ContactPage() {
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) throw new Error("Submission failed");
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Submission failed");
+      }
 
       setStatus({
         loading: false,

@@ -1,34 +1,70 @@
+import { NextResponse } from 'next/server';
 
-import { NextResponse } from "next/server";
+// Ensure the route runs in a Node.js runtime (required for nodemailer)
+export const runtime = 'nodejs';
+import nodemailer from 'nodemailer';
 
-export async function POST(request) {
+export async function POST(req) {
     try {
-        const body = await request.json();
-        const { name, email, phone, message } = body;
+        const { name, email, phone, message } = await req.json();
 
-        // Simple validation
+        // Validate input
         if (!name || !email || !message) {
-            return NextResponse.json(
-                { error: "Missing required fields" },
-                { status: 400 }
-            );
+            return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+        }
+        // Basic email format validation
+        const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if (!emailRegex.test(email)) {
+            return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
         }
 
-        // TODO: Integrate with an email service like SendGrid, Resend, or Nodemailer
-        // For now, we'll just log the data to the server console
-        console.log("Contact Form Submission:", { name, email, phone, message });
+        // Create a transporter using SMTP
+        // You need to add these environment variables to your .env.local file
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST || 'smtp.gmail.com',
+            port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 587,
+            secure: false, // true for 465, false for other ports
+            auth: {
+                user: process.env.EMAIL_USER, // Your email address
+                pass: process.env.EMAIL_PASS, // Your email password or app-specific password
+            },
+        });
 
-        // Simulate a delay
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        // Email content
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER, // Send to yourself
+            replyTo: email, // Allow replying to the sender
+            subject: `New Contact Form Submission from ${name}`,
+            text: `
+        Name: ${name}
+        Email: ${email}
+        Phone: ${phone || 'Not provided'}
+        
+        Message:
+        ${message}
+      `,
+            html: `
+        <h3>New Contact Form Submission</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `,
+        };
+
+        // Send email
+        await transporter.sendMail(mailOptions);
 
         return NextResponse.json(
-            { success: true, message: "Email sent successfully!" },
+            { message: 'Email sent successfully' },
             { status: 200 }
         );
     } catch (error) {
-        console.error("Contact API Error:", error);
+        console.error('Error sending email:', error);
         return NextResponse.json(
-            { error: "Internal Server Error" },
+            { error: error.message || 'Failed to send email' },
             { status: 500 }
         );
     }
