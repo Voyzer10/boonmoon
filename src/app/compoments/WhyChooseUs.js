@@ -19,11 +19,11 @@ export default function WhyChooseUs() {
       title: "Reliable Logistics Network",
       desc: "Trusted shipping partners ensure timely deliveries with secure handling and real-time tracking.",
     },
-    {
-      icon: <BadgePercent className="w-7 h-7 text-[#E0B25B]" />,
-      title: "Competitive Pricing Advantage",
-      desc: "Exclusive global partnerships allow us to offer premium-quality products at competitive prices.",
-    },
+    // {
+    //   icon: <BadgePercent className="w-7 h-7 text-[#E0B25B]" />,
+    //   title: "Competitive Pricing Advantage",
+    //   desc: "Exclusive global partnerships allow us to offer premium-quality products at competitive prices.",
+    // },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
         <div className="w-20 h-1 bg-[#E0B25B] mx-auto rounded-full mb-16"></div>
 
         {/* Tiles */}
-        <div className="grid md:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-3 gap-10">
           {features.map((item, i) => (
             <div
               key={i}

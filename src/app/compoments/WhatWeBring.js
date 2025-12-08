@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const categories = [
   {
-    title: "Food Imports",
-    description: "Authentic gourmet products...",
-    image: "/images/food-imports.jpg",
+    title: "Everyday Food & Essential items",
+    description: "Premium daily food and lifestyle essentials...",
+    image: "/images/food-and-essentials.png",
     link: "/products#food-imports",
   },
   {
@@ -18,10 +18,10 @@ const categories = [
     link: "/products#specialty-goods",
   },
   {
-    title: "Everyday Essentials",
-    description: "Quality household products...",
-    image: "/images/everyday-essentials.jpg",
-    link: "/products#everyday-essentials",
+    title: "Industrial supplies",
+    description: "Genuine raw materials and components…",
+    image: "/images/industrial-supplies.png",
+    link: "/products#industrial-supplies",
   },
 ];
 

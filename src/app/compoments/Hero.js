@@ -21,8 +21,7 @@ const Hero = () => {
         
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Connecting Global <br className="hidden md:block" />
-          Goodness to UAE
+          Bringing Global Goodness to UAE
         </h1>
 
         <p className="text-lg md:text-xl text-gray-200 mb-10">
@@ -40,10 +39,10 @@ const Hero = () => {
           </Link>
 
           <Link
-            href="/partner"
+            href="/contact"
             className="px-6 py-3 border border-yellow-400 text-yellow-400 font-medium rounded-lg hover:bg-yellow-400 hover:text-black transition-all duration-300"
           >
-            Partner With Us
+            Contact Us 
           </Link>
         </div>
       </div>

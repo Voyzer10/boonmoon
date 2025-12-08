@@ -29,12 +29,12 @@ export default function ProductsPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1624] via-[#0A1624] to-[#1A2229]" />
         <div className="relative z-10 px-6">
-          <div className="flex justify-center mb-6">
-            <div className="flex items-center gap-2 bg-[#2A3035]/80 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md">
-              <Globe className="w-4 h-4 text-[#E0B25B]" />
-              <span>Sourced from 15+ Countries</span>
-            </div>
-          </div>
+          {/* <div className="flex justify-center mb-6">
+            <div className="flex items-center gap-2 bg-[#2A3035]/80 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md"> */}
+              {/* <Globe className="w-4 h-4 text-[#E0B25B]" /> */}
+              {/* <span>Sourced from 15+ Countries</span> */}
+            {/* </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Products</h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -46,8 +46,8 @@ export default function ProductsPage() {
       {/* Floating Header */}
       <Header />
 
-      {/* ---------- EVERYDAY ESSENTIALS (Now Correctly ID-linked) ---------- */}
-      <section id="everyday-essentials" className="py-24 bg-[#FBF7EF]">
+      {/* ---------- Industrial supplies (Now Correctly ID-linked) ---------- */}
+      <section id="industrial-supplies" className="py-24 bg-[#FBF7EF]">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl text-center">
           <h2 className="text-4xl font-bold text-[#1D2B3A] mb-4">
             Global Quality, Local Trust
@@ -59,13 +59,13 @@ export default function ProductsPage() {
         </div>
 
         <div className="container mx-auto px-6 md:px-12 max-w-6xl flex flex-col md:flex-row items-center gap-12">
-          
+
           {/* Left Image */}
           <div className="flex-1">
             <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/everyday-essentials.jpg"
-                alt="Everyday Essentials"
+                src="/images/industrial-supplies.png"
+                alt="Industrial Supplies"
                 fill
                 className="object-cover"
                 priority
@@ -80,26 +80,28 @@ export default function ProductsPage() {
                 <ShoppingBag className="w-5 h-5 text-[#1D2B3A]" />
               </div>
               <h3 className="text-3xl font-bold text-[#1D2B3A]">
-                Everyday Essentials
+                Industrial supplies
               </h3>
             </div>
 
             <p className="text-[#384759] leading-relaxed text-lg">
-              Premium household and personal care products sourced from trusted global brands.
+              Genuine raw materials and components for your operational and manufacturing needs …
             </p>
 
             <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
-              <li>Household cleaning products</li>
-              <li>Personal care items</li>
-              <li>Paper products and tissues</li>
-              <li>Laundry and fabric care</li>
-              <li>Air fresheners and sanitizers</li>
+              <li>Chemicals</li>
+              <li>Plant & animal-based inputs</li>
+              <li>Industrial spares</li>
+              {/* <li>Industrial Cleaning & Maintenance Items</li>
+              <li>Storage & Packaging Essentials</li> */}
             </ul>
 
-            <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition">
-              Inquire About This Category
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            {/* <Link href="/contact">
+              <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95">
+                Inquire About This Category
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -112,7 +114,7 @@ export default function ProductsPage() {
           <div className="flex-1">
             <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/food-imports.jpg"
+                src="/images/food-and-essentials.png"
                 alt="Food & Beverage Imports"
                 fill
                 className="object-cover"
@@ -126,24 +128,26 @@ export default function ProductsPage() {
               <div className="p-2 bg-[#F5EAD3] rounded-lg">
                 <Package className="w-5 h-5 text-[#1D2B3A]" />
               </div>
-              <h3 className="text-3xl font-bold text-[#1D2B3A]">Food & Beverage Imports</h3>
+              <h3 className="text-3xl font-bold text-[#1D2B3A]">Everyday Food & Essential items</h3>
             </div>
 
             <p className="text-[#384759] leading-relaxed text-lg">
-              Authentic flavors from around the world...
+              Quality food and lifestyle essentials sourced from trusted suppliers...
             </p>
 
             <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
-              <li>International snacks</li>
-              <li>Premium beverages</li>
-              <li>Specialty sauces</li>
-              <li>Canned and packaged foods</li>
+              <li>Premium beverage & snacks</li>
+              <li>Packaged foods</li>
+              <li>Household products</li>
+              <li>Daily self-care items</li>
             </ul>
 
-            <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition">
-              Inquire About This Category
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            {/* <Link href="/contact">
+              <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95">
+                Inquire About This Category
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -184,16 +188,18 @@ export default function ProductsPage() {
               <li>Unique imported goods</li>
             </ul>
 
-            <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition">
-              Inquire About This Category
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            {/* <Link href="/contact">
+              <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95">
+                Inquire About This Category
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </Link> */}
           </div>
         </div>
       </section>
 
       {/* ---------- WHY CHOOSE (NO ID) ---------- */}
-      <section className="py-24 bg-[#FBF7EF] text-center">
+      {/* <section className="py-24 bg-[#FBF7EF] text-center">
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <h2 className="text-4xl font-bold text-[#1D2B3A] mb-4">Why Choose Our Products?</h2>
           <p className="text-[#384759] text-lg mb-16">
@@ -232,10 +238,10 @@ export default function ProductsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FINAL CTA */}
-      <section className="py-20 bg-[#FBF7EF] flex justify-center">
+      {/* <section className="py-20 bg-[#FBF7EF] flex justify-center">
         <div className="bg-gradient-to-b from-[#0A1624] to-[#1C252B] text-center rounded-2xl text-white p-12 max-w-4xl w-full shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Stock Quality Products?
@@ -259,7 +265,7 @@ export default function ProductsPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

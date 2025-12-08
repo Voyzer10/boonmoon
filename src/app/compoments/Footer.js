@@ -23,8 +23,8 @@ export default function Footer() {
               />
             </div> */}
             <p className="text-gray-300 leading-relaxed mb-3 max-w-sm">
-              Bringing Global Goodness Home. We connect authentic products from
-              around the world to the UAE market with transparency and care.
+              Bonn Moon Trading - FZCO is a licensed Freezone company,
+              established under the Dubai Integrated Economic Zones Authority with license number 63520.
             </p>
             <p className="italic text-[#E0B25B]">
               Bonn Moon — where "Bon" meets blessings
@@ -37,11 +37,11 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-            <li>
-              <Link href="/" className="hover:text-[#F5EAD3] transition">
-                Home
-              </Link>
-            </li>
+              <li>
+                <Link href="/" className="hover:text-[#F5EAD3] transition">
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/about"
@@ -55,7 +55,7 @@ export default function Footer() {
                   href="/products"
                   className="hover:text-[#E0B25B] transition-colors"
                 >
-                   Products
+                  Products
                 </Link>
               </li>
               <li>
@@ -67,7 +67,7 @@ export default function Footer() {
                 </Link> */}
               </li>
               <li>
-                  <Link href="/contact" 
+                <Link href="/contact"
                   className="hover:text-[#E0B25B] transition-colors">
 
                   Contact US
@@ -83,21 +83,33 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#E0B25B]" />
+                <Mail className="w-4 h-4 text-[#E0B25B] flex-shrink-0" />
                 <a
-                  href="mailto:info@bonnmoontrading.com"
+                  href="mailto:info@bonnmoon.com"
                   className="hover:text-[#E0B25B] transition-colors"
                 >
-                  info@bonnmoontrading.com
+                  info@bonnmoon.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#E0B25B]" />
-                <span>+971 XX XXX XXXX</span>
+                <Phone className="w-4 h-4 text-[#E0B25B] flex-shrink-0" />
+                <a
+                  href="tel:+97152010055"
+                  className="hover:text-[#E0B25B] transition-colors"
+                >
+                  +971 52010055
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#E0B25B]" />
-                <span>UAE, United Arab Emirates</span>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-5 h-5 text-[#E0B25B] flex-shrink-0 mt-1" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Building+A1,+IFZA+Business+Park,+Dubai+Silicon+Oasis,+Dubai,+UAE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E0B25B] transition-colors leading-relaxed"
+                >
+                  63520-001, Building A1, IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE
+                </a>
               </li>
             </ul>
 

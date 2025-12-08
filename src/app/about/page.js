@@ -2,11 +2,13 @@
 import { useRef } from "react";
 import { Moon } from "lucide-react";
 import AboutMeaning from "./AboutMeaning";
+import Person from "../compoments/person";
 import AboutMissionVision from "./AboutMissionVision";
 import AboutCoreValues from "./AboutCoreValues";
 import AboutPartner from "./AboutPartner";
 import Footer from "../compoments/Footer";
 import Header from "../compoments/Header";
+
 
 export default function AboutPage() {
   const aboutRef = useRef(null);
@@ -31,7 +33,7 @@ export default function AboutPage() {
           <div className="flex justify-center mb-6">
             <div className="relative flex items-center justify-center w-12 h-12">
               <div className="absolute inset-0 bg-[#E0B25B] blur-2xl opacity-40 rounded-full" />
-              <Moon className="relative w-8 h-8 text-[#E0B25B]" />
+              {/* <Moon className="relative w-8 h-8 text-[#E0B25B]" /> */}
             </div>
           </div>
 
@@ -40,8 +42,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Bringing Global Goodness Home — where{" "}
-            <span className="text-[#E0B25B]">"Bon"</span> meets blessings
+            Bringing Global Goodness to UAE
           </p>
         </div>
       </section>
@@ -54,6 +55,10 @@ export default function AboutPage() {
       {/* 2️⃣ The Meaning Behind Bonn Moon */}
       <AboutMeaning />
 
+      {/* 3️⃣ The Bonn Person */}
+      <Person />
+
+
       {/* 3️⃣ Mission & Vision */}
       <AboutMissionVision />
 
@@ -61,7 +66,7 @@ export default function AboutPage() {
       <AboutCoreValues />
 
       {/* 5️⃣ Partner With Us */}
-      <AboutPartner />
+      {/* <AboutPartner /> */}
 
       {/* 6️⃣ Footer */}
       <Footer />

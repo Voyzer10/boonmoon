@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function CallToAction() {
   return (
     <section className="relative py-24 bg-[#0A1624] text-center text-white overflow-hidden">
-      
+
       <div className="container mx-auto px-6 md:px-12 max-w-3xl">
-        
+
         {/* Logo Glow */}
         <div className="flex justify-center mb-6">
           <div className="relative flex items-center justify-center w-14 h-14">
@@ -23,13 +23,12 @@ export default function CallToAction() {
 
         {/* Quote */}
         <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4 font-playfair">
-          "The Good Moon Shines on Every Trade"
+          "Your Gateway to Global Goodness"
         </h2>
 
         {/* Subtext */}
         <p className="text-lg text-gray-300 max-w-xl mx-auto mb-10 font-inter">
-          Ready to bring global goodness to your business? Let’s create a
-          partnership built on transparency, quality, and trust.
+          Ready to bring global goodness to your business?
         </p>
 
         {/* CTA Button */}
@@ -42,10 +41,10 @@ export default function CallToAction() {
               shadow-[0_0_40px_rgba(224,178,91,0.5)]
               hover:shadow-[0_0_60px_rgba(224,178,91,0.8)]
               hover:bg-[#f0c978]
-              transition-all duration-300
+              transition-all duration-300 transform hover:scale-105 active:scale-95
             "
           >
-            Start a Partnership
+            Contact Us
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-4 h-4"
@@ -64,7 +63,7 @@ export default function CallToAction() {
         </div>
 
         {/* Email */}
-        <p className="mt-6 text-gray-400 text-sm font-inter">
+        {/* <p className="mt-6 text-gray-400 text-sm font-inter">
           Or email us at{" "}
           <a
             href="mailto:info@bonnmoontrading.com"
@@ -72,7 +71,7 @@ export default function CallToAction() {
           >
             info@bonnmoontrading.com
           </a>
-        </p>
+        </p> */}
       </div>
 
       {/* Background Glow */}

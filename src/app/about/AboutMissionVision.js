@@ -4,7 +4,7 @@ import { Globe2, Sparkles } from "lucide-react";
 
 export default function AboutMissionVision() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#FFFDF9]">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl text-center">
         {/* Section Header */}
         <h2 className="text-4xl md:text-5xl font-bold text-[#1D2B3A] mb-4">

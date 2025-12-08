@@ -26,7 +26,8 @@ export default function Header() {
   return (
     <>
       {/* HEADER WRAPPER — NO CLICK BLOCKING */}
-      <header className="fixed top-6 left-1/2 -translate-x-1/2 z-[200] w-full flex justify-center pointer-events-none">
+      <header className="fixed top-0 left-1/2 -translate-x-1/2 z-[200] w-full flex justify-center pointer-events-none">
+
 
         {/* REAL HEADER CONTENT */}
         <div

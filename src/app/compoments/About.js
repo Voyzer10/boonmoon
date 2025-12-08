@@ -8,18 +8,18 @@ const About = () => {
     <section className="relative py-24 bg-[#FFFDF9]">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left: Image */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
-          <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-lg">
-          <Image
-    src="/images/connection.jpg"
-    alt="Global trade connections"
-    fill
-    className="object-cover"
-    priority
-  />
-</div>
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/connection.jpg"
+                alt="Global trade connections"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
 
           </div>
 
@@ -48,17 +48,7 @@ const About = () => {
                 represents the blessings of food and prosperity in Vedic astrology.
               </p>
 
-              <p>
-                Together, they embody our mission: to bring global goodness to
-                the UAE market through transparent, simple, and forward-thinking
-                trade practices.
-              </p>
 
-              <p>
-                We source authentic products directly from their countries of
-                origin, ensuring quality, authenticity, and fair trade at every
-                step.
-              </p>
             </div>
 
             {/* Values */}

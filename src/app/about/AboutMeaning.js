@@ -24,12 +24,12 @@ export default function AboutMeaning() {
           {/* Right: Content */}
           <div className="space-y-6">
             {/* Label */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFF4E5] rounded-full shadow-sm">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFF4E5] rounded-full shadow-sm">
               <Moon className="w-4 h-4 text-[#E0B25B]" />
               <span className="text-sm font-medium text-[#6B4E2F]">
                 Our Story
               </span>
-            </div>
+            </div> */}
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-bold text-[#1D2B3A] leading-tight font-serif">
@@ -39,29 +39,17 @@ export default function AboutMeaning() {
             {/* Description */}
             <div className="space-y-5 text-[#384759] text-lg leading-relaxed">
               <p>
-                Our name tells our story.{" "}
-                <span className="font-semibold text-[#1D2B3A]">"Bonn"</span>{" "}
-                comes from the French word <em>"Bon"</em> meaning "good," while{" "}
-                <span className="font-semibold text-[#1D2B3A]">"Moon"</span>{" "}
-                represents the blessings of food and prosperity in Vedic
-                astrology.
+                Our name tells our story. It is believed that <span className="font-bold text-[#1D2B3A]">“Bonn”</span> in Old Irish refers to a “piece of money,” while <span className="font-bold text-[#1D2B3A]">“Bon”</span> in French means “good.” The word <span className="font-bold text-[#1D2B3A]">“Moon”</span> often symbolizes blessings of food and prosperity in a variety of cultural and traditional contexts.
               </p>
-
               <p>
-                Together, they embody our mission: to bring global goodness to
-                the UAE market through transparent, simple, and forward-thinking
-                trade practices.
-              </p>
-
-              <p>
-                We source authentic products directly from their countries of
-                origin, ensuring quality, authenticity, and fair trade at every
-                step.
+                By combining these meanings, our name reflects our commitment to bringing “global goodness” to the UAE—fostering ethical trade, cultural exchange, and shared prosperity. This approach inspires us to build business partnerships that are both mutually beneficial and harmonious, guided by
               </p>
             </div>
+
+            
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

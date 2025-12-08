@@ -87,7 +87,7 @@ export default function ContactPage() {
       <section className="py-24 bg-[#FBF7EF]">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
-            
+
             {/* Left: Contact Info */}
             <div>
               <h2 className="text-3xl font-bold text-[#1D2B3A] mb-4">Contact Information</h2>
@@ -103,8 +103,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Email</p>
-                    <a href="mailto:info@bonnmoontrading.com" className="text-[#384759] hover:text-[#E0B25B]">
-                      info@bonnmoontrading.com
+                    <a href="mailto:info@bonnmoon.com" className="text-[#384759] hover:text-[#E0B25B]">
+                      info@bonnmoon.com
                     </a>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Phone</p>
-                    <p className="text-[#384759]">+971 XX XXX XXXX</p>
+                    <p className="text-[#384759]">+971 52010055</p>
                   </div>
                 </div>
 
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Location</p>
-                    <p className="text-[#384759]">UAE, United Arab Emirates</p>
+                    <p className="text-[#384759]">63520-001, Building A1, IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE,</p>
                   </div>
                 </div>
 
@@ -223,23 +223,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 3️⃣ Location Section */}
-      <section className="py-24 bg-[#FBF7EF] border-t border-[#EDEBE5]">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#1D2B3A] mb-2">Visit Our Location</h2>
-          <p className="text-[#384759]">
-            Find us in the heart of UAE&apos;s trading district
-          </p>
-        </div>
 
-        <div className="max-w-5xl mx-auto bg-white border border-[#EDEBE5] rounded-2xl shadow-sm py-24 text-center">
-          <MapPin className="w-12 h-12 text-[#0A1624] mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-[#1D2B3A] mb-2">
-            UAE, United Arab Emirates
-          </h3>
-          <p className="text-[#384759]">Exact location shared upon inquiry</p>
-        </div>
-      </section>
 
       {/* Footer */}
       <Footer />
