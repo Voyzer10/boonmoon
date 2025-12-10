@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function Person() {
     return (
-        <section className="py-20 bg-gradient-to-br from-[#FAF6EF] to-[#EDEBE5] rounded-2xl shadow-xl backdrop-blur-md bg-white/5">
+        <section className="py-20 bg-gradient-to-br from-[#FAF6EF] to-[#EDEBE5] shadow-xl backdrop-blur-md bg-white/5">
             <div className="container mx-auto px-6 md:px-12 max-w-7xl">
                 <div className="flex flex-col items-center text-center space-y-8">
                     {/* Left: Content */}
                     <div className="order-2 md:order-1 space-y-6">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F4F1EA] rounded-full w-fit">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F4F1EA] w-fit">
                             <span className="text-sm font-semibold text-[#6B4E2F] uppercase tracking-wider">
                                 The “Bonn” Person
                             </span>
