@@ -2,29 +2,29 @@
 import { useRef } from "react";
 import { Handshake, Globe, Package, TrendingUp, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Footer from "../compoments/Footer";
-import Header from "../compoments/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function PartnerPage() {
   const aboutRef = useRef(null);
   return (
     <main className="flex flex-col min-h-screen bg-[#FBF7EF]">
       {/* 1️⃣ Hero Section */}
-      <section 
-      ref={aboutRef}
-      className="relative flex flex-col items-center justify-center text-center text-white h-[60vh] overflow-hidden">
+      <section
+        ref={aboutRef}
+        className="relative flex flex-col items-center justify-center text-center text-white h-[60vh] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1624] via-[#0D1928] to-[#1D2B3A]" />
         <div className="relative z-10 px-6">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Partner With Us</h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 leading-relaxed">
-            Together, let’s build bridges of trade — empowering businesses across borders 
+            Together, let’s build bridges of trade — empowering businesses across borders
             with quality, reliability, and shared growth.
           </p>
         </div>
       </section>
       <div>
-              <Header />
-            </div>
+        <Header />
+      </div>
 
       {/* 2️⃣ Why Partner With Us */}
       <section className="py-24 bg-[#FBF7EF]">
@@ -35,12 +35,12 @@ export default function PartnerPage() {
               Why Partner with Bonn Moon Trading
             </h2>
             <p className="text-[#384759] text-lg leading-relaxed mb-6">
-              We collaborate with manufacturers, distributors, and retailers to bring 
-              authentic, high-quality products to the UAE and MENA region. Our partnership 
+              We collaborate with manufacturers, distributors, and retailers to bring
+              authentic, high-quality products to the UAE and MENA region. Our partnership
               model is built on transparency, shared value, and long-term success.
             </p>
             <p className="text-[#384759] text-lg leading-relaxed">
-              Whether you are a brand looking to expand globally or a business seeking 
+              Whether you are a brand looking to expand globally or a business seeking
               reliable sourcing partners — we make international trade simple and rewarding.
             </p>
           </div>
@@ -56,8 +56,8 @@ export default function PartnerPage() {
                   Trusted by Global Brands
                 </h3>
                 <p className="text-[#384759] text-base leading-relaxed">
-                  We’ve built partnerships with suppliers and clients in 
-                  <span className="font-semibold"> 15+ countries</span> — ensuring 
+                  We’ve built partnerships with suppliers and clients in
+                  <span className="font-semibold"> 15+ countries</span> — ensuring
                   smooth logistics and unmatched product quality.
                 </p>
               </div>
@@ -160,7 +160,7 @@ export default function PartnerPage() {
           <div className="rounded-3xl bg-gradient-to-b from-[#0A1624] to-[#1F2C39] text-white text-center py-16 px-6 md:px-12">
             <h2 className="text-4xl font-bold mb-6">Become Our Partner Today</h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-              Join our global trade network and unlock new opportunities for your business 
+              Join our global trade network and unlock new opportunities for your business
               across continents. Let’s grow together — ethically and sustainably.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">

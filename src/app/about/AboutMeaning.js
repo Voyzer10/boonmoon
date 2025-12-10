@@ -42,7 +42,7 @@ export default function AboutMeaning() {
                 Our name tells our story. It is believed that <span className="font-bold text-[#1D2B3A]">“Bonn”</span> in Old Irish refers to a “piece of money,” while <span className="font-bold text-[#1D2B3A]">“Bon”</span> in French means “good.” The word <span className="font-bold text-[#1D2B3A]">“Moon”</span> often symbolizes blessings of food and prosperity in a variety of cultural and traditional contexts.
               </p>
               <p>
-                By combining these meanings, our name reflects our commitment to bringing “global goodness” to the UAE—fostering ethical trade, cultural exchange, and shared prosperity. This approach inspires us to build business partnerships that are both mutually beneficial and harmonious, guided by
+                By combining these meanings, our name reflects our commitment to bringing “global goodness” to the UAE—fostering ethical trade, cultural exchange, and shared prosperity. This approach inspires us to build business partnerships that are both mutually beneficial and harmonious, guided by values of authenticity, fairness, and transparent practices.
               </p>
             </div>
 

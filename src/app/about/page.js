@@ -2,12 +2,12 @@
 import { useRef } from "react";
 import { Moon } from "lucide-react";
 import AboutMeaning from "./AboutMeaning";
-import Person from "../compoments/person";
+import Person from "../components/person";
 import AboutMissionVision from "./AboutMissionVision";
 import AboutCoreValues from "./AboutCoreValues";
 import AboutPartner from "./AboutPartner";
-import Footer from "../compoments/Footer";
-import Header from "../compoments/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 
 export default function AboutPage() {

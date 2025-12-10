@@ -1,6 +1,6 @@
 import "./globals.css";
-import Header from "./compoments/Header";
-import FloatingContactButton from "./compoments/FloatingContactButton";
+import Header from "./components/Header";
+import FloatingContactButton from "./components/FloatingContactButton";
 
 export const metadata = {
   title: "Bonn Moon Trading",

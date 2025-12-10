@@ -26,9 +26,7 @@ export default function Footer() {
               Bonn Moon Trading - FZCO is a licensed Freezone company,
               established under the Dubai Integrated Economic Zones Authority with license number 63520.
             </p>
-            <p className="italic text-[#E0B25B]">
-              Bonn Moon — where "Bon" meets blessings
-            </p>
+
           </div>
 
           {/* Middle: Quick Links */}
@@ -94,10 +92,10 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#E0B25B] flex-shrink-0" />
                 <a
-                  href="tel:+97152010055"
+                  href="tel:+971527010055"
                   className="hover:text-[#E0B25B] transition-colors"
                 >
-                  +971 52010055
+                  +971 527010055
                 </a>
               </li>
               <li className="flex items-start gap-2">

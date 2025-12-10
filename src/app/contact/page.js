@@ -2,8 +2,8 @@
 
 import { useRef, useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import Footer from "../compoments/Footer";
-import Header from "../compoments/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function ContactPage() {
   const aboutRef = useRef(null);
@@ -89,7 +89,7 @@ export default function ContactPage() {
       {/* 2️⃣ Contact Info + Form */}
       <section className="py-24 bg-[#FBF7EF]">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Left: Contact Info */}
             <div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Phone</p>
-                    <p className="text-[#384759]">+971 52010055</p>
+                    <p className="text-[#384759]">+971 527010055</p>
                   </div>
                 </div>
 
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     value={form.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-lg border border-[#E6E2D9] bg-[#FAF6EF] text-[#1D2B3A] focus:outline-none focus:ring-2 focus:ring-[#E0B25B]/40"
-                    placeholder="+971 XX XXX XXXX"
+                    placeholder="+971 52 701 0055"
                   />
                 </div>
 

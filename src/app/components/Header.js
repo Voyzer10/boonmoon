@@ -35,7 +35,7 @@ export default function Header() {
             pointer-events-auto
             w-full max-w-[90rem]
             flex items-center justify-between px-10 gap-10
-            rounded-[2.2rem] backdrop-blur-xl border border-white/20
+            backdrop-blur-xl border border-white/20
             shadow-[0_8px_35px_rgba(0,0,0,0.35)]
             transition-all duration-300 ease-in-out
             ${scrolled ? "py-3 bg-[#0a1624]/90" : "py-6 bg-[#0a1624]/60"}
@@ -90,7 +90,7 @@ export default function Header() {
         <div
           className="
             fixed top-[90px] left-1/2 -translate-x-1/2
-            w-[85%] bg-[#0a1624]/95 rounded-2xl border border-white/10 
+            w-[85%] bg-[#0a1624]/95 border border-white/10 
             backdrop-blur-xl shadow-2xl p-6 space-y-4 md:hidden
             text-[#e6daae] font-inter z-[999]
           "

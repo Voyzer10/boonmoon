@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Globe, ShoppingBag, Package, Sparkles, Box, ArrowRight } from "lucide-react";
-import Footer from "../compoments/Footer";
-import Header from "../compoments/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function ProductsPage() {
 
@@ -31,9 +31,9 @@ export default function ProductsPage() {
         <div className="relative z-10 px-6">
           {/* <div className="flex justify-center mb-6">
             <div className="flex items-center gap-2 bg-[#2A3035]/80 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md"> */}
-              {/* <Globe className="w-4 h-4 text-[#E0B25B]" /> */}
-              {/* <span>Sourced from 15+ Countries</span> */}
-            {/* </div>
+          {/* <Globe className="w-4 h-4 text-[#E0B25B]" /> */}
+          {/* <span>Sourced from 15+ Countries</span> */}
+          {/* </div>
           </div> */}
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Products</h1>
@@ -46,8 +46,9 @@ export default function ProductsPage() {
       {/* Floating Header */}
       <Header />
 
-      {/* ---------- Industrial supplies (Now Correctly ID-linked) ---------- */}
-      <section id="industrial-supplies" className="py-24 bg-[#FBF7EF]">
+
+      {/* ---------- Food & Essentials (Now Correctly ID-linked) ---------- */}
+      <section id="FoodAndEssentials" className="py-24 bg-[#FBF7EF]">
         <div className="container mx-auto px-6 md:px-12 max-w-7xl text-center">
           <h2 className="text-4xl font-bold text-[#1D2B3A] mb-4">
             Global Quality, Local Trust
@@ -61,96 +62,36 @@ export default function ProductsPage() {
         <div className="container mx-auto px-6 md:px-12 max-w-6xl flex flex-col md:flex-row items-center gap-12">
 
           {/* Left Image */}
-          <div className="flex-1">
-            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/industrial-supplies.png"
-                alt="Industrial Supplies"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Right Text */}
-          <div className="flex-1 space-y-5">
-            <div className="flex items-center gap-2">
-              <div className="p-2 bg-[#F5EAD3] rounded-lg">
-                <ShoppingBag className="w-5 h-5 text-[#1D2B3A]" />
+          <div className="container mx-auto px-6 md:px-12 max-w-6xl flex flex-col md:flex-row-reverse items-center gap-12">
+            <div className="flex-1">
+              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
+                <Image src="/images/food-and-essentials.png" alt="Food & Beverage Imports" fill className="object-cover" />
               </div>
-              <h3 className="text-3xl font-bold text-[#1D2B3A]">
-                Industrial supplies
-              </h3>
             </div>
 
-            <p className="text-[#384759] leading-relaxed text-lg">
-              Genuine raw materials and components for your operational and manufacturing needs …
-            </p>
+            <div className="flex-1 space-y-5">
+              <div className="flex items-center gap-2">
+                <div className="p-2 bg-[#F5EAD3] rounded-lg">
+                  <Package className="w-5 h-5 text-[#1D2B3A]" />
+                </div>
+                <h3 className="text-3xl font-bold text-[#1D2B3A]">Everyday Food & Essential items</h3>
+              </div>
 
-            <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
-              <li>Chemicals</li>
-              <li>Plant & animal-based inputs</li>
-              <li>Industrial spares</li>
-              {/* <li>Industrial Cleaning & Maintenance Items</li>
-              <li>Storage & Packaging Essentials</li> */}
-            </ul>
+              <p className="text-[#384759] leading-relaxed text-lg">
+                Food and lifestyle essentials sourced from trusted suppliers...
+              </p>
 
-            {/* <Link href="/contact">
-              <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95">
-                Inquire About This Category
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </Link> */}
+              <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
+                <li>Beverage & Snacks</li>
+                <li>Packaged Foods</li>
+                <li>Household Products</li>
+                <li>Daily Self-Care Items</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ---------- FOOD IMPORTS ---------- */}
-      <section id="food-imports" className="py-24 bg-[#FBF7EF]">
-        <div className="container mx-auto px-6 md:px-12 max-w-6xl flex flex-col md:flex-row-reverse items-center gap-12">
-
-          {/* Image */}
-          <div className="flex-1">
-            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/food-and-essentials.png"
-                alt="Food & Beverage Imports"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Text */}
-          <div className="flex-1 space-y-5">
-            <div className="flex items-center gap-2">
-              <div className="p-2 bg-[#F5EAD3] rounded-lg">
-                <Package className="w-5 h-5 text-[#1D2B3A]" />
-              </div>
-              <h3 className="text-3xl font-bold text-[#1D2B3A]">Everyday Food & Essential items</h3>
-            </div>
-
-            <p className="text-[#384759] leading-relaxed text-lg">
-              Quality food and lifestyle essentials sourced from trusted suppliers...
-            </p>
-
-            <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
-              <li>Premium beverage & snacks</li>
-              <li>Packaged foods</li>
-              <li>Household products</li>
-              <li>Daily self-care items</li>
-            </ul>
-
-            {/* <Link href="/contact">
-              <button className="inline-flex items-center gap-2 bg-[#E0B25B] hover:bg-[#D4A84E] text-[#1D2B3A] font-semibold px-6 py-3 rounded-lg mt-4 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95">
-                Inquire About This Category
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </Link> */}
-          </div>
-        </div>
-      </section>
 
       {/* ---------- SPECIALTY GOODS ---------- */}
       <section id="specialty-goods" className="py-24 bg-[#FBF7EF]">
@@ -197,6 +138,52 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      {/* ---------- Industrial supplies (NOW LAST & MATCHES FOOD LAYOUT) ---------- */}
+      <section id="industrial-supplies" className="py-24 bg-[#FBF7EF]">
+        <div className="container mx-auto px-6 md:px-12 max-w-6xl flex flex-col md:flex-row-reverse items-center gap-12">
+
+          {/* ✅ IMAGE RIGHT (LIKE FOOD SECTION) */}
+          <div className="flex-1">
+            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/industrial-supplies.png"
+                alt="Industrial Supplies"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* ✅ TEXT LEFT */}
+          <div className="flex-1 space-y-5">
+            <div className="flex items-center gap-2">
+              <div className="p-2 bg-[#F5EAD3] rounded-lg">
+                <ShoppingBag className="w-5 h-5 text-[#1D2B3A]" />
+              </div>
+              <h3 className="text-3xl font-bold text-[#1D2B3A]">
+                Industrial Supplies
+              </h3>
+            </div>
+
+            <p className="text-[#384759] leading-relaxed text-lg">
+              Genuine raw materials and components for your operational and manufacturing needs …
+            </p>
+
+            <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
+              <li>Chemicals</li>
+              <li>Plant & animal-based inputs</li>
+              <li>Industrial spares</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
 
       {/* ---------- WHY CHOOSE (NO ID) ---------- */}
       {/* <section className="py-24 bg-[#FBF7EF] text-center">
