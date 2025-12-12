@@ -78,7 +78,7 @@ export default function ProductsPage() {
               </div>
 
               <p className="text-[#384759] leading-relaxed text-lg">
-                Food and lifestyle essentials sourced from trusted suppliers...
+                Premium food and lifestyle essentials sourced from trusted suppliers...
               </p>
 
               <ul className="list-disc list-inside text-[#384759] space-y-2 text-base">
