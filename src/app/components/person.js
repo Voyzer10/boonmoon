@@ -27,7 +27,7 @@ export default function Person() {
                                 With 18 years of wide-ranging experience in investment banking, consultancy, and corporate banking throughout India and North America, Shiv offers substantial expertise to her venture.
                             </p>
                             <p>
-                                Her three years working purely on commission enhanced her abilities in business development, networking, and transforming cold outreach into valuable sales leads. Drawing on her extensive technical understanding of international trade, Shiv has built reliable relationships in India's export and import industries.
+                                Her three years working purely on commission enhanced her abilities in business development, networking, and transforming cold outreach into valuable sales leads. Drawing on her extensive technical understanding of international trade, Shiv has built reliable relationships globally.
                             </p>
                         </div>
 
