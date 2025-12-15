@@ -122,7 +122,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/bonnmoontrading?igsh=MWZwc21rbGd2aTMwdA%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1E2A3B] hover:bg-[#E0B25B] hover:text-[#0A1624] transition-all duration-300"
@@ -141,3 +141,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+
