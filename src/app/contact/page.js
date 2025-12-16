@@ -106,8 +106,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1D2B3A]">Email</p>
-                    <a href="mailto:info@bonnmoon.com" className="text-[#384759] hover:text-[#E0B25B]">
-                      info@bonnmoon.com
+                    <a href="mailto:shiv.deol@bonnmoon.com" className="text-[#384759] hover:text-[#E0B25B]">
+                      shiv.deol@bonnmoon.com
                     </a>
                   </div>
                 </div>

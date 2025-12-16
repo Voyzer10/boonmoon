@@ -33,7 +33,7 @@ export async function POST(req) {
         // Email content
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'info@bonnmoon.com', // Send to info@bonnmoon.com
+            to: 'shiv.deol@bonnmoon.com', // Send to shiv.deol@bonnmoon.com
             replyTo: email, // Allow replying to the sender
             subject: `New Contact Form Submission from ${name}`,
             text: `
